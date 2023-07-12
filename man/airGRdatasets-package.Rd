@@ -25,7 +25,7 @@
 Delaigue, O., Brigode, P., Andréassian, V., Perrin, C., Etchevers, P., Soubeyroux, J.-M., Janet, B. and Addor, N. (2022).
 CAMELS-FR: A large sample hydroclimatic dataset for France to explore hydrological diversity and support model benchmarking.
 11th edition of the IAHS Scientific Assembly. International Association of Hydrological Sciences, Montpellier, 29 May - 3 Jun. 2022.
-\href{https://hal.archives-ouvertes.fr/hal-03687235/}{hal-03687235}
+\href{https://hal.science/hal-03687235/}{hal-03687235}
 }
 
 \references{
