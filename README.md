@@ -2,7 +2,8 @@
 
 ## Overview
 
-'airGRdatasets' provides metadata and catchment-scale aggregated hydro-meteorological time series on a pool of French catchments for use by the 'airGR' packages. More especially, it can be used by teachers and students for hydrological modeling exercises adapted to the 'airGRteaching' package as described in [Delaigue et al. (submitted)](https://doi.org/10.5194/hess-2022-421) and in the 'airGRteaching' vignettes.
+'airGRdatasets' provides metadata and catchment-scale aggregated hydro-meteorological time series on a pool of French catchments for use by the 'airGR' packages. 
+More especially, it can be used by teachers and students for hydrological modeling exercises adapted to the 'airGRteaching' package, as described in [Delaigue et al. (2023)](https://doi.org/10.5194/hess-27-3293-2023) and in the 'airGRteaching' vignettes.
 
 For more details:
 ``` r
@@ -17,7 +18,7 @@ For more details:
 
 ### Release version
 
-To install the version of the package that is on the CRAN, you just have to use the following command line:
+To install the version of the package that is on the CRAN, simply run:
 
 ``` r
 install.packages("airGRdatasets")
@@ -25,7 +26,8 @@ install.packages("airGRdatasets")
 
 ### Unrelease version
 
-To use the development version of the package that is on GitLab, you have first to install the 'remotes' package. Then you can install the 'airGRdatasets' package in the R environment:
+To use the development version of the package available on GitLab, first install the 'remotes' package. 
+Then you can install 'airGRdatasets' within the R environment:
 
 ``` r
 install.packages("remotes")

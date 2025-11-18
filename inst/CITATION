@@ -12,13 +12,12 @@ bibentry(bibtype     = "Manual",
          year        = year,
          note        = note,
          url         = "https://CRAN.R-project.org/package=airGRdatasets",
-         doi         = "10.57745/3SPJ4B",
+         doi         = "10.32614/CRAN.package.airGRdatasets",
          textVersion =
            paste0("Delaigue, O., Brigode, P. and Thirel, G.(",
                   year,
                   "). airGRdatasets: Hydro-Meteorological Catchments Datasets for the 'airGR' Packages. ",
                   note, ", ",
-                  "doi: 10.57745/3SPJ4B", ", ",
-                  "URL: https://CRAN.R-project.org/package=airGRdatasets."
+                  "doi: 10.32614/CRAN.package.airGRdatasets."
                   )
 )

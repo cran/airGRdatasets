@@ -52,12 +52,14 @@ Y862000101
 
 
 \description{
-The meteorological forcing is derived from the SAFRAN reanalysis (8 km resolution grid) produced by Météo-France (Vidal et al., 2010).
+Meteorological forcing is derived from the SAFRAN reanalysis (8 km resolution grid) produced by Météo-France (Quintana-Seguí et al., 2008; Vidal et al., 2010).
 
-The meteorological forcing is aggregated at the catchment scale and merged to streamflow data in the CAMELS-FR database from INRAE (Delaigue et al., 2022). To do that, boundaries, area and elevation are calculated using the SRTM DEM (Werner, 2001); the stations were snaped on a theorical river network by INRAE (100 m resolution grid).
+Meteorological forcing is aggregated at the catchment scale and merged with streamflow data within the CAMELS-FR database from INRAE (Delaigue et al., 2024; Delaigue et al., 2025). To accomplish this, catchment boundaries, area, and elevation are determined using two digital terrain models (DTMs).
+For continental metropolitan France, we used the 100 m × 100 m resolution DTM from the Shuttle Radar Topography Mission (SRTM) project (Rabus et al., 2003; Farr et al., 2007), while for Corsica, the BD ALTI v1.0 with 25 m × 25 m resolution from IGN (2001) was employed.
+Stations were snapped to a theoretical river network derived from the DTMs, with flow directions constrained using the stream-burning method and the CARTHAGE river network (French water agencies, 2017) after channel removal.
 
-The streamflows, codes and name of hydrometric station are provided by the SCHAPI (the French Central Hydrometeorological and Flood Forecasting Support Service) on the Hydroportail website (SCHAPI, 2022). Streamflows are converted into mm/d using the DEM-based area.
-
+The streamflow data, as well as the codes and names of hydrometric stations, are provided by SCHAPI (the French Central Hydrometeorological and Flood Forecasting Support Service) via the Hydroportail website (SCHAPI, 2022).
+Streamflows are converted to mm/d using the DEM-based catchment area
 }
 
 
@@ -107,35 +109,64 @@ List of available catchments:
     \code{Y643401001} \tab \code{R} \tab the Esteron at Broc [La Clave] \cr
     \code{Y862000101} \tab \code{S} \tab the Taravo at Zigliara [Pont d'Abra] \cr
   }
-  \if{html}{\figure{airGRdatasets-map-catchments.png}{options: width="60\%" alt="Figure: airGRdatasets-map-catchments.png"}}
+  \if{html}{\figure{airGRdatasets-map-catchments.png}{options: style="width: 60\%;" alt="Figure: airGRdatasets-map-catchments.png"}}
   \if{latex}{\figure{airGRdatasets-map-catchments.png}{options: width=6cm}}
 }
 
 
 
 \source{
-Delaigue, O., Brigode, P., Andréassian, V., Perrin, C., Etchevers, P., Soubeyroux, J.M., Janet, B. and Addor, N. (2022).
-CAMELS-FR: A large sample hydroclimatic dataset for france to explore hydrological diversity and support model benchmarking.
-11th edition of the IAHS Scientific Assembly. International Association of Hydrological Sciences, Montpellier, 29 May - 3 Jun. 2022.
-\href{https://hal.science/hal-03687235/}{hal-03687235}
+Delaigue, O., Guimarães, G. M., Brigode, P., Génot, B., Perrin, C., and Andréassian, V. (2024).
+  CAMELS-FR dataset, V1,
+  Recherche Data Gouv [data set],
+  \doi{10.57745/WH7FJR}.
 }
 
 \references{
-Oudin, L., Hervieu, F., Michel, C., Perrin, C., Andréassian, V., Anctil, F. and Loumagne, C. (2005).
-  Which potential evapotranspiration input for a lumped rainfall-runoff model? Part 2 - Towards a simple and efficient potential evapotranspiration model for rainfall-runoff modelling.
-  Journal of Hydrology, 303(1-4), 290-306, \doi{10.1016/j.jhydrol.2004.08.026}.
-  \cr\cr
+Delaigue, O., Guimarães, G. M., Brigode, P., Génot, B., Perrin, C., Soubeyroux, J.-M., Janet, B., Addor, N., and Andréassian, V. (2025).
+  CAMELS-FR dataset: a large-sample hydroclimatic dataset for France to explore hydrological diversity and support model benchmarking,
+  Earth Syst. Sci. Data, 17, 1461–1479,
+  \doi{10.5194/essd-17-1461-2025}.
+\cr\cr
+Farr, T. G., Rosen, P. A., Caro, E., Crippen, R., Duren, R., Hensley, S., Kobrick, M., Paller, M., Rodriguez, E., Roth, L.,
+Seal, D., Shaffer, S., Shimada, J., Umland, J., Werner, M., Oskin, M., Burbank, D., and Alsdorf, D. (2007) .
+  The Shuttle Radar Topography Mission,
+  Rev. Geophys., 45, RG2004,
+  \doi{10.1029/2005RG000183}.
+\cr\cr
+French water agencies: BD Carthage (2017).
+  Cours d'eau de Métropole 2017, version 2019-10-24, Eaufrance [data set],
+  \href{https://www.sandre.eaufrance.fr/atlas/srv/fre/catalog.search#/metadata/7381de46-42f7-42df-9abe-0ecd4b946034}{https://www.sandre.eaufrance.fr/atlas/sandre.eaufrance.fr/bd-carthage}
+\cr\cr
+IGN (2001).
+  BD ALTI, version 1.0.,
+  Institut national de l'information géographique et forestière (IGN) [data set],
+  \url{https://geoservices.ign.fr/bdalti}.
+\cr\cr
+Oudin, L., Hervieu, F., Michel, C., Perrin, C., Andréassian, V., Anctil, F., and Loumagne, C. (2005).
+  Which potential evapotranspiration input for a lumped rainfall-runoff model?
+  Part 2 - Towards a simple and efficient potential evapotranspiration model for rainfall-runoff modelling.
+  Journal of Hydrology, 303(1-4), 290-306,
+  \doi{10.1016/j.jhydrol.2004.08.026}.
+\cr\cr
+Quintana-Segui, P., Le Moigne, P., Durand, Y., Martin, E., Habets, F., Baillon, M., Canellas, C., Franchisteguy, L., and Morel, S. (2008).
+  Analysis of near-surface atmospheric variables: Validation of the SAFRAN analysis over France,
+  J. Appl. Meteorol. Clim., 47, 92–107,
+  \doi{10.1175/2007JAMC1636.1}.
+\cr\cr
+Rabus, B., Eineder, M., Roth, A., and Bamler, R. (2003).
+  The shuttle radar topography mission—a new class of digital elevation models acquired by spaceborne radar,
+  ISPRS J. Photogramm., 57, 241–262,
+    \doi{10.1016/S0924-2716(02)00124-7}.
+\cr\cr
 SCHAPI (2022).
   Hydroportail website. Retrieve hydrometric data from the French National Surface Water Quantity Database.
   \url{https://www.hydro.eaufrance.fr/}.
 \cr\cr
-Vidal, J.-P., Martin, E., Franchistéguy, L., Baillon, M. and Soubeyroux, J. (2010).
+Vidal, J.-P., Martin, E., Franchistéguy, L., Baillon, M., and Soubeyroux, J. (2010).
   A 50-year high-resolution atmospheric reanalysis over France with the Safran system.
-  International Journal of Climatology, 30, 1627–1644, \doi{10.1002/joc.2003}.
-  \cr\cr
-Jarvis A., Reuter H.I., Nelson A. & Guevara E. (2008).
-  Hole-filled SRTM for the globe V4.
-  International Centre for Tropical Agriculture (CIAT).
+  International Journal of Climatology, 30, 1627–1644,
+  \doi{10.1002/joc.2003}.
 }
 
 
