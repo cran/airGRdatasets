@@ -4,6 +4,15 @@
 
 
 
+### 0.2.3 Release Notes (2025-12-04)
+
+#### Licensing
+
+- Updated the README and LICENSE files to ensure documentation is consistent with the new package license ([#20](https://gitlab.irstea.fr/HYCAR-Hydro/airgrgalaxy/airgrdatasets/-/issues/20)).
+
+____________________________________________________________________________________
+
+
 ### 0.2.2 Release Notes (2025-11-18)
 
 #### Licensing
